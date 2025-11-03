@@ -1,0 +1,232 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Add these styles to your existing App.css */
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #ef4444;
+}
+
+/* Results page specific styles */
+.results-container {
+  padding: 2rem 0;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.result-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.result-score {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.result-message {
+  font-size: 1.5rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.answer-review {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.review-item {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.review-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.review-item.correct {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.review-item.incorrect {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.review-question {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.review-answer {
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.review-explanation {
+  font-style: italic;
+  color: #64748b;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  border-left: 3px solid #6366f1;
+}
+
+/* Quiz progress indicator */
+.quiz-progress {
+  background: #e2e8f0;
+  height: 8px;
+  border-radius: 4px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.quiz-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.time-left {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Responsive design for results */
+@media (max-width: 768px) {
+  .result-card {
+    padding: 2rem 1rem;
+  }
+  
+  .result-score {
+    font-size: 3rem;
+  }
+  
+  .result-actions {
+    flex-direction: column;
+  }
+  
+  .review-item {
+    padding: 1rem;
+  }
+}
+/* Results Page Specific Styles */
+.results-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 0;
+}
+
+.result-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.answer-review {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Loading and Error States */
+.loading, .error {
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.loading {
+  color: #6366f1;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #ef4444;
+  border-left: 4px solid #ef4444;
+}
+
+.error h2 {
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.error ul {
+  text-align: left;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.error li {
+  margin: 0.5rem 0;
+}
